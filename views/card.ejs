@@ -1,0 +1,24 @@
+
+<% if (locals.articles) { %>
+<% for( let index = 0; index < articles.length; index++ ) { %>
+  <div class="col">
+
+    <div class="card shadow-sm">
+      <img class="card-img-top" src="<%= articles[index].urlToImage %>" alt="Card image cap">      <div class="card-body">
+        <h5 class="card-title">
+              <%= articles[index].title %>
+      </h5>
+      <p class="card-text">
+        <%= articles[index].description %> 
+      </p>        
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <p > <a href="<%= articles[index].url %>">More</a></p>
+          </div> 
+          <small class="text-body-secondary"><%= articles[index].source.name %> <br> <%= articles[index].publishedAt %> </small>
+        </div>
+      </div>
+    </div>
+    </div>
+<% } %>
+<% } %>
